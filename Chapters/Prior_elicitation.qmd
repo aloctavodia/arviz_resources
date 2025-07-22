@@ -290,7 +290,7 @@ with pm.Model() as model:
 
 The first thing to do is to define our target distribution. We may be tempted to describe it a Gaussian with most of its mass between the weight of a typical cell and the weight of a blue whale.  While this is a resonable assumption, is not enough. We are modeling $p(Y \mid X)$, so it's not enough to just describe $p(Y)$. What we can do is to think what values of $Y$ (mass of the predator) we should expect for $X$ the mass of preys. This of course rellies of expert knowledge (as priors should). For this example we are going to use some information from the data and some prior knowledge. We can argue that we are only weakly informing the prior from the data. We are going to take a few quantiles from our $X$, the mass of the preys. And then we are going to assume that usually predator are larger that prey.
 
-```python
+```{python}
 q = [0.1, 0.25, 0.5, 0.75, 0.9]
 x_prior = np.quantile(pp_mass["prey_log"], q)
 target = pz.Normal(x_prior+np.log(10), pp_mass["predator_log"].std()/2)
