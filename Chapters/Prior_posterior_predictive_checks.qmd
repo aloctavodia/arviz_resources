@@ -667,9 +667,7 @@ The y-axis of @fig-ppc_pava is labeled as CEP, short for "conditional event prob
 
 ### Posterior predictive checks for categorical data
 
-A [categorical](https://en.wikipedia.org/wiki/Categorical_variable) variable, can take on one of a limited, and usually fixed, number of possible values.
-
-For categorical data we can use the same approach used for binary data if we follow a "one vs others" strategy. That is, for we select one category and we compare it to all the other categories. This will give as many plots as cateogries, which can be fine when the number of categories is relativelly low, but unwieldy otherwise. In those other cases, we can first use a confusion matrix or some scalar miscallibration summary per cateogry to help us filter out the cases that we want to inspect visually [@Säilynoja_2025].
+A [categorical](https://en.wikipedia.org/wiki/Categorical_variable) variable can take on one of a limited, and usually fixed, number of possible values. For categorical data, we can use the same approach used for binary data if we follow a "one vs others" strategy. That is, we select one category and we compare it to all the other categories. This will give as many plots as categories, which can be fine when the number of categories is relatively low, but unwieldy otherwise. In those other cases, we can first use a confusion matrix or some scalar miscallibration summary per category to help us filter out the cases that we want to inspect visually [@Säilynoja_2025].
 
 We can use `plot_ppc_pava` for categorical data, but not directly. We need to tell it that we have categorical data by passing `data_type="categorical"`.
 
@@ -688,9 +686,9 @@ azp.plot_ppc_pava(dt_cat, data_type="categorical")
 
 ### Posterior predictive checks for ordinal data
 
-[Ordinal data](https://en.wikipedia.org/wiki/Ordinal_data) is a categorical, statistical data type where the variables have natural, ordered categories and the distances between the categories are not known. For ordinal data we have to take into account the order when evaluating the calibration. Then we can compute the cumulative conditional event probabilities [@Säilynoja_2025], this will get us one plot less than the number of categories.
+[Ordinal data](https://en.wikipedia.org/wiki/Ordinal_data) is a categorical, statistical data type where the variables have natural, ordered categories and the distances between the categories are not known. For ordinal data, we must account for the order when evaluating the calibration. Then we can compute the cumulative conditional event probabilities [@Säilynoja_2025], which will get us one plot less than the number of categories.
 
-With ordinal data we can not directly use `plot_ppc_pava`, we have to pass `data_type="ordinal"`.
+With ordinal data, we can not directly use `plot_ppc_pava`; we have to pass `data_type="ordinal"`.
 
 
 ```{python}
