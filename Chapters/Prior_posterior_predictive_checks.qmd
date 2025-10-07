@@ -716,7 +716,7 @@ The following example is from a model of cat adoption. We record how many months
 #| label: fig-ppc_censored
 #| fig-cap: "Posterior predictive check for survival/censored data using Kaplan-Meier curves."
 dt_cens = azp.load_arviz_data('censored_cats')
-azp.plot_ppc_censored(dt_ord)
+azp.plot_ppc_censored(dt_cens)
 ```
 
 To keep predictions within a meaningful range ArviZ truncates the predictive data relative to the maximum observed duration, preventing the survival curves from extending too far beyond the observed data. You can change this with the argument `truncation_factor`, which defaults to 1.2, meaning up to a 20% larger that the maximum observation.
