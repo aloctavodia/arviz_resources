@@ -2,7 +2,7 @@ arviz==0.21.0
 arviz-base @ git+https://github.com/arviz-devs/arviz-base
 arviz-stats @ git+https://github.com/arviz-devs/arviz-stats
 arviz-plots @ git+https://github.com/arviz-devs/arviz-plots
-bambi @ git+https://github.com/bambinos/bambi
+bambi>=0.16.0
 kulprit @ git+https://github.com/bambinos/kulprit
 preliz==0.21.0
 pymc>=5.22.0
