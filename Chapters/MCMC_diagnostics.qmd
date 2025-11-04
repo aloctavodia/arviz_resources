@@ -49,13 +49,13 @@ To keep the focus on the diagnostics and not on any particular Bayesian model. W
 #| code-fold: true
 #| code-summary: "Show the code for more details"
 
-good_sample = pz.Gamma(2, 5).rvs((3, 1000), random_state=rng)
+good_sample = pz.Gamma(2, 5).rvs((4, 1000), random_state=rng)
 bad_sample0 = pz.Normal(np.sort(good_sample, axis=None),
-                        0.05).rvs(3000, random_state=rng).reshape(3, -1)
+                        0.05).rvs(4000, random_state=rng).reshape(4, -1)
 
 bad_sample1 = good_sample.copy()
 stuck = []
-for i in pz.DiscreteUniform(0, 900).rvs(3, random_state=rng):
+for i in pz.DiscreteUniform(0, 900).rvs(4, random_state=rng):
     stuck.append((i, i+50))
     bad_sample1[0,i:i+50] = pz.Beta(i, 150).rvs(50, random_state=rng)
 
@@ -95,7 +95,7 @@ Now let's see an example of a bad sample. @fig-traceplot_bad_sample_0 shows two 
 ```{python}
 #| label: fig-traceplot_bad_sample_0
 #| code-fold: true
-#| fig-cap: "Trace plot of 3 chains that has not converged"
+#| fig-cap: "Trace plot of 4 chains that has not converged"
 azp.plot_trace_dist(sample, var_names="bad_sample_0", compact=False);
 ```
 
