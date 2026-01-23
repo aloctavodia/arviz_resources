@@ -1,4 +1,4 @@
-arviz==0.22.0
+arviz==0.23.1
 arviz-base @ git+https://github.com/arviz-devs/arviz-base
 arviz-stats @ git+https://github.com/arviz-devs/arviz-stats
 arviz-plots @ git+https://github.com/arviz-devs/arviz-plots
