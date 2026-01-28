@@ -150,7 +150,7 @@ dist = pz.Gamma(3, 2)
 mean = dist.mean()
 median = dist.median()
 mode = dist.mode()
-ax = dist.plot_pdf(figsize=(10, 3), legend="title")
+ax = dist.plot_pdf(figsize=(8, 3), legend="title")
 for idx, (stat, value) in enumerate(zip(
     [f"mean    = {mean:.1f}", f"median = {median:.1f}", f"mode    = {mode:.1f}"], [mean, median, mode]
 )):
@@ -194,7 +194,7 @@ For some distributions like asymmetric ones, the HDI is usually preferred over t
 #| code-fold: true
 #| label: credible-intervals
 #| fig-cap: "HDI (top) and ETI (bottom) credible intervals for a Gamma distribution. The thin line of the interval shows the 89% interval and the thick line shows the 50% interval."
-_, ax = plt.subplots(2, 1, figsize=(10, 3), sharex=True)
+_, ax = plt.subplots(2, 1, figsize=(8, 3), sharex=True)
 dist = pz.Gamma(3, 2)
 dist.plot_pdf(ax=ax[0], legend="title", pointinterval=True, interval="hdi")
 dist.plot_pdf(ax=ax[1], legend=None, pointinterval=True, interval="eti");
