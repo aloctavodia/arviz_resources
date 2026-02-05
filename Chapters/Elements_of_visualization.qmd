@@ -95,7 +95,7 @@ A common criticism of perceptually smooth maps is that they appear more "flat" o
 Matplotlib allows users to easily switch between plotting styles by defining style sheets. ArviZ is delivered with a few additional styles that can be applied globally by writing `az.style.use(name_of_style)` or inside a `with` statement.
 
 
-::: {.panel-tabset group="ppl"}
+::: {.panel-tabset}
 ## variat
 ```{python}
 #| code-fold: true
