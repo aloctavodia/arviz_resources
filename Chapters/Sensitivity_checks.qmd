@@ -46,7 +46,7 @@ distributions = [(pz.Beta, lambda α:(α*s1 - α + 1, α*s2 - α + 1)),
                  (pz.Normal, lambda α:(0, (1/α**0.5)*σ)),
                  ]
 
-_, axes = plt.subplots(2, 1, figsize=(12, 5))
+_, axes = plt.subplots(2, 1, figsize=(10, 5))
 for (dist_, params), ax in zip(distributions, axes.ravel()):
     for α, color in zip([1, 0.5, 2], ["k", "C0", "C1"]):
         dist = dist_(*params(α))
@@ -157,7 +157,7 @@ $$
 
 For the prior (and likelihood) sensitivity method to work we need to ensure that the `DataTree` object includes the groups log-prior and log-likelihood. 
 
-::: {.panel-tabset}
+::: {.panel-tabset group="ppl"}
 ## PyMC
 
 ```{python}
@@ -231,7 +231,7 @@ informative for some of the regression coefficients, including wrist, while bein
 
 Now, let try with a different prior. We will use empirically scaled to the data, $βk \sim \mathcal{N}(0, 2.5 \frac{s_y}{s_{xk}})$, where $s_y$ is the standard deviation of $y$ and $s_{xk}$ is the standard deviation of predictor variable $xk$.
 
-::: {.panel-tabset}
+::: {.panel-tabset group="ppl"}
 ## PyMC
 
 ```{python}
@@ -355,7 +355,7 @@ K = len(bacteria["ID"].unique())
 
 Let's start by fitting a hierarchical model. The model is as follows:
 
-::: {.panel-tabset}
+::: {.panel-tabset group="ppl"}
 ## PyMC
 
 ```{python}

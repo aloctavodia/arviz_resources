@@ -60,7 +60,7 @@ where $y^\ast$ represents unobserved but potentially observable data. Notice tha
 
 To exemplify a prior predictive check, let's try with a super simple example. Let's say we want to model the height of humans. We know that the heights are positive numbers, so we should use a distribution that assigns zero mass to negative values. But we also know that at least for adults using a normal distribution could be a good approximation. So we create the following model, without too much thought, and then draw 500 samples from the prior predictive distribution.
 
-::: {.panel-tabset}
+::: {.panel-tabset group="ppl"}
 ## PyMC
 
 ```{python}
@@ -158,7 +158,7 @@ In many cases, data will be informative enough to overcome poorly selected prior
 
 Such priors are often called weakly informative priors. Though not strictly defined, these priors produce a prior predictive distribution with little to no probability mass in unrealistic or impossible regions. For example, a normal distribution with a mean of 160 and a standard deviation of 10 assigns negligible weight to negative values while still accommodating a wide range of plausible heights.
 
-::: {.panel-tabset}
+::: {.panel-tabset group="ppl"}
 ## PyMC
 
 ```{python}
@@ -298,7 +298,7 @@ Notice that what we are doing is marginalizing the likelihood by integrating all
 Continuing with our height example, we can generate synthetic data from the posterior predictive distribution.
 
 
-::: {.panel-tabset}
+::: {.panel-tabset group="ppl"}
 ## PyMC
 
 ``` {python}
@@ -421,6 +421,7 @@ pc = azp.combine_plots(dt,
                   (azp.plot_ppc_tstat, {"t_stat":"iqr"}),                   
                  ],
                 group="posterior_predictive",
+                figure_kwargs={"figsize":(9, 3)}
 )
 ```
 
@@ -521,7 +522,6 @@ dt_i = azp.from_dict({
 azp.plot_ppc_dist(dt_i,
                   kind="kde",  
                   visuals={"remove_axis":False},
-                  figure_kwargs={"sharey":True},             
                  );
 ```
 
@@ -534,7 +534,7 @@ Then we show the ECDFs of the observed data and the predictions.
 #| fig-cap: "Posterior predictive check with ECDFs showing four alternative scenarios."
 azp.plot_ppc_dist(dt_i,
                   kind="ecdf",
-                  figure_kwargs={"sharey":True},        
+                  figure_kwargs={"sharey":True, "figsize":(9, 3)},         
                  );
 ```
 
@@ -545,7 +545,7 @@ Finally, we show the PIT-ECDFs.
 #| fig-cap: "Posterior predictive check with PIT-ECDFs showing four alternative scenarios."
 azp.plot_ppc_pit(dt_i,
                  visuals={"ylabel":False},
-                 figure_kwargs={"sharey":True},        
+                 figure_kwargs={"sharey":True, "figsize":(9, 3)},   
                  );
 ```
 
@@ -563,7 +563,7 @@ Using ArviZ we can visualize the ETI coverage by setting ``coverage=True`` in th
 azp.plot_ppc_pit(dt_i,
                  coverage=True,
                  visuals={"ylabel":False},
-                 figure_kwargs={"sharey":True},
+                 figure_kwargs={"sharey":True, "figsize":(9, 3)},
                  );
 ```
 
@@ -679,7 +679,11 @@ dt_cat = azp.convert_to_datatree("../models/prerun/dt_cat.nc")
 ```{python}
 #| label: fig-ppc_pava_cat
 #| fig-cap: "PAV-adjusted calibration plot for a categorical regression model."
-azp.plot_ppc_pava(dt_cat, data_type="categorical")
+azp.plot_ppc_pava(
+    dt_cat,
+    data_type="categorical",
+    figure_kwargs={"figsize":(9, 3)},
+    )
 ```
 
 
@@ -698,7 +702,11 @@ dt_ord = azp.convert_to_datatree("../models/prerun/dt_ord.nc")
 ```{python}
 #| label: fig-ppc_pava_ord
 #| fig-cap: "PAV-adjusted calibration plot for an ordinal regression model."
-azp.plot_ppc_pava(dt_ord, data_type="ordinal")
+azp.plot_ppc_pava(
+    dt_ord,
+    data_type="ordinal",
+    figure_kwargs={"figsize":(10, 4)},
+    )
 ```
 
 ### Posterior predictive checks for censored data 

@@ -291,7 +291,7 @@ After all this introduction, actually computing LOO may seem somewhat disappoint
 
 To compare two or more models, we can use the `compare` function, which accepts a dictionary where the keys are the names of the models and the values are `DataTree` objects.
 
-::: {.panel-tabset}
+::: {.panel-tabset group="ppl"}
 ## PyMC
 
 ```{python}
@@ -856,7 +856,7 @@ This is true only when $H_0$ is a particular case of $H_1$, see [The Book of Sta
 
 Let's do it. We only need to sample the prior and posterior for a model. Let's try the BetaBinomial model with a Uniform prior:
 
-::: {.panel-tabset}
+::: {.panel-tabset group="ppl"}
 ## PyMC
 
 ``` {python}
@@ -900,7 +900,7 @@ As we have already discussed, the Bayes factors measure which model, as a whole,
 
 If, instead, our model were a BetaBinomial with a  prior Beta(30, 30), the `BF_01` would be lower (\textit{anecdotal} on the Jeffrey scale). This is because, according to this model, the value of $\theta=0.5$ is much more likely a priori than for a Uniform prior, and therefore the prior and posterior will be much more similar. That is, it is not very \textit{surprising} to see that the posterior is concentrated around 0.5 after collecting data. Don't just believe me, let's calculate it:
 
-::: {.panel-tabset}
+::: {.panel-tabset group="ppl"}
 ## PyMC
 
 ``` {python}

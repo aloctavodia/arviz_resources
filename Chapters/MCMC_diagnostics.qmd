@@ -339,7 +339,6 @@ ArviZ offers several functions linked to the ESS. For example, if we want to eva
 ```{python}
 azp.plot_ess(
     sample,
-    figure_kwargs={"figsize": (10, 8)},
     col_wrap=1,
 )
 ```
@@ -450,7 +449,12 @@ From @fig-parallel_plot we can see that the `centered` model has divergences in 
 ```{python}
 #| label: fig-parallel_plot
 #| fig-cap: "Parallel coordinates plot for `centereed` model."
-azp.plot_parallel(idata_cm, var_names=['theta', 'tau'])
+azp.plot_parallel(
+    idata_cm,
+    var_names=['theta', 'tau'],
+    figure_kwargs={"figsize": (9, 4)},
+    visuals={"xticks":{"rotation": 45}}
+    )
 ```
 
 
