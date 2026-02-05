@@ -42,7 +42,7 @@ The dataset exhibits substantial overdispersion with mean 25.6 and standard devi
 
 We fit a Poisson regression model using Bambi, which provides a high-level interface for Bayesian modeling. The model includes the pre-treatment roach count, treatment indicator, and senior building indicator as predictors, with log exposure as an offset.
 
-::: {.panel-tabset}
+::: {.panel-tabset group="ppl"}
 ## Bambi
 
 ```{python}

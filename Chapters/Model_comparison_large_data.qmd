@@ -70,7 +70,7 @@ y = wells["switch"].values
 
 We can fit the model using PyMC or CmdStanPy where posterior draws are stored in a `DataTree` object.
 
-::: {.panel-tabset}
+::: {.panel-tabset group="ppl"}
 ## PyMC
 
 ```{python}
@@ -235,7 +235,7 @@ Draws from $q(\theta \mid y)$ can be obtained efficiently by sampling from the f
 
 The following fits the wells model using a Laplace approximation via `pymc_extras.fit_laplace`, which returns draws from the approximate posterior along with the mode and covariance estimates.
 
-::: {.panel-tabset}
+::: {.panel-tabset group="ppl"}
 ## PyMC
 
 ```{python}
@@ -383,7 +383,7 @@ In our wells example, the subsampled approximate posterior LOO produces estimate
 
 We can compare models that are estimated via subsampling just like we would for regular LOO using the `compare()` function. We will fit a second model using `log(arsenic)` instead of `arsenic` as a predictor and compare the two models.
 
-::: {.panel-tabset}
+::: {.panel-tabset group="ppl"}
 ## PyMC
 
 ```{python}
