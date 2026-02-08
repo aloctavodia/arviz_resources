@@ -86,4 +86,7 @@ theme:
 
 bibliography: references.bib
 
+citation:
+  doi: "10.5281/zenodo.15127548"
+  url: https://arviz-devs.github.io/EABM/
 google-scholar: true
