@@ -28,7 +28,7 @@ If you are using specific methods or functions from the book, please consider ci
 
 If you want to cite this online book in your research. The following citation is recommended, as it always resolves to the latest version of the book:
 
-> Martin et al. (2025). Exploratory Analysis of Bayesian Models. Zenodo. https://doi.org/10.5281/zenodo.15127548}
+> Martin et al. (2025). Exploratory Analysis of Bayesian Models. Zenodo. https://doi.org/10.5281/zenodo.15127548
 
 You can use the following BibTeX entry:
 
