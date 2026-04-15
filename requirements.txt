@@ -1,6 +1,4 @@
 arviz>=1.0.0
-arviz-base @ git+https://github.com/arviz-devs/arviz-base.git
-arviz-stats @ git+https://github.com/arviz-devs/arviz-stats.git
 arviz-plots @ git+https://github.com/arviz-devs/arviz-plots.git
 bambi>=0.16.0
 kulprit ==0.5.0
