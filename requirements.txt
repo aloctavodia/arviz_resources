@@ -1,6 +1,6 @@
 arviz>=1.0.0
 arviz-plots @ git+https://github.com/arviz-devs/arviz-plots.git
-bambi>=0.16.0
+bambi>=0.17.2
 kulprit ==0.5.0
 preliz @ git+https://github.com/arviz-devs/preliz.git
 netcdf4>=1.7.2
