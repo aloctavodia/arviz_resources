@@ -512,7 +512,7 @@ The first two columns help build intuition because they remain in the original d
 ```{python}
 #| label: fig-post_ppc_pit_ecdf_alt_0
 #| fig-cap: "Posterior predictive check with KDEs, ECDFs, and PIT-ECDFs showing four alternative scenarios."
-observed = pz.Normal(0, 1).rvs(500)
+observed = pz.Normal(0, 1).rvs(200)
 
 predictions = {}
 for i, (mu, sigma) in enumerate([
@@ -521,7 +521,7 @@ for i, (mu, sigma) in enumerate([
                                 (0, 2),    # wider 
                                 (0, 0.5),  # narrower
                                 ]):
-    predictions[f"y{i}"] =  pz.Normal(mu, sigma).rvs((4, 500, 100))
+    predictions[f"y{i}"] =  pz.Normal(mu, sigma).rvs((4, 500, 200))
 
 dt_i = az.from_dict({
     "posterior_predictive":predictions,
