@@ -5,6 +5,6 @@ kulprit ==0.5.0
 preliz @ git+https://github.com/arviz-devs/preliz.git
 netcdf4>=1.7.2
 pymc @ git+https://github.com/pymc-devs/pymc.git
-pymc-bart ==0.11.0
+pymc-bart @ git+https://github.com/pymc-devs/pymc-bart.git
 pymc-extras>=0.5.0
 scipy>=1.16.2
