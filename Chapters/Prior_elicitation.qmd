@@ -213,7 +213,7 @@ with pm.Model() as model:
 	β = pm.Normal("β", 0, 100)
 	σ = pm.HalfNormal("σ", 5)
 	pm.Normal("prey", α + β * pp_mass["prey_log"], σ, observed=pp_mass["predator_log"])
-	idata = pm.sample_prior_predictive(samples=100)
+	idata = pm.sample_prior_predictive(draws=100)
 ```
 
 
@@ -235,7 +235,7 @@ with pm.Model() as model:
 	β = pm.Normal("β", 0, 1)
 	σ = pm.HalfNormal("σ", 5)
 	prey = pm.Normal("prey", α + β * pp_mass["prey_log"], σ, observed=pp_mass["predator_log"])
-	idata = pm.sample_prior_predictive(samples=100)
+	idata = pm.sample_prior_predictive(draws=100)
 ```
 
 We can plot the prior predictive distribution and compare it with the reference values.
