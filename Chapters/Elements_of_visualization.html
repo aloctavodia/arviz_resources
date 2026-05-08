@@ -101,9 +101,9 @@ div.csl-indent {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-7bf12d62aa84b4fa538b342f1416a45b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-691c43ad62c52d8f2a4cfbd07224d002.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-7bf12d62aa84b4fa538b342f1416a45b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-a59734170fbb569a7de8d2cde8689902.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-06efa47294e5a4b40460ae195afbf2dd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-a59734170fbb569a7de8d2cde8689902.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -138,6 +138,8 @@ div.csl-indent {
 <meta name="citation_cover_date" content="2025-04-02">
 <meta name="citation_year" content="2025">
 <meta name="citation_online_date" content="2025-04-02">
+<meta name="citation_fulltext_html_url" content="https://arviz-devs.github.io/EABM/">
+<meta name="citation_doi" content="10.5281/zenodo.15127548">
 <meta name="citation_language" content="en">
 <meta name="citation_reference" content="citation_title=Graphical perception: Theory, experimentation, and application to the development of graphical methods;,citation_author=William S. Cleveland;,citation_author=Robert McGill;,citation_publication_date=1984;,citation_cover_date=1984;,citation_year=1984;,citation_fulltext_html_url= https://www.tandfonline.com/doi/abs/10.1080/01621459.1984.10478080;,citation_issue=387;,citation_doi=10.1080/01621459.1984.10478080;,citation_volume=79;,citation_journal_title=Journal of the American Statistical Association;,citation_publisher=Taylor &amp;amp;amp; Francis;">
 <meta name="citation_reference" content="citation_title=Crowdsourcing graphical perception: Using mechanical turk to assess visualization design;,citation_author=Jeffrey Heer;,citation_author=Michael Bostock;,citation_publication_date=2010-04;,citation_cover_date=2010-04;,citation_year=2010;,citation_fulltext_html_url=https://doi.org/10.1145/1753326.1753357;,citation_doi=10.1145/1753326.1753357;,citation_isbn=978-1-60558-929-9;,citation_conference_title=Proceedings of the SIGCHI Conference on Human Factors in Computing Systems;,citation_conference=Association for Computing Machinery;,citation_series_title=CHI ’10;">
@@ -209,6 +211,7 @@ div.csl-indent {
 <meta name="citation_reference" content="citation_title=The book of statistical proofs;,citation_author=Joram Soch;,citation_author=Thomas J Faulkenberry;,citation_author=Kenneth Petrykowski;,citation_author=Carsten Allefeld;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;,citation_fulltext_html_url=https://statproofbook.github.io/;,citation_doi=10.5281/ZENODO.4305949;">
 <meta name="citation_reference" content="citation_title=Predictive assessment and comparison of bayesian survival models for cancer recurrence;,citation_author=Saku Suorsa;,citation_author=Aki Vehtari;,citation_publication_date=2026;,citation_cover_date=2026;,citation_year=2026;,citation_fulltext_html_url=https://arxiv.org/abs/2601.01662;">
 <meta name="citation_reference" content="citation_title=Statistical Rethinking: A Bayesian Course with Examples in R and STAN;,citation_author=Richard McElreath;,citation_publication_date=2020;,citation_cover_date=2020;,citation_year=2020;,citation_fulltext_html_url=https://doi.org/10.1201/9780429029608;,citation_isbn=978-0-367-13991-9;">
+<meta name="citation_reference" content="citation_title=LOO-PIT predictive model checking;,citation_author=Herman Tesso;,citation_author=Aki Vehtari;,citation_publication_date=2026;,citation_cover_date=2026;,citation_year=2026;,citation_fulltext_html_url=https://arxiv.org/abs/2603.02928;">
 </head>
 
 <body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -578,7 +581,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">February 6, 2026</p>
+      <p class="date-modified">May 8, 2026</p>
     </div>
   </div>
     
@@ -601,22 +604,22 @@ div.csl-indent {
 <section id="nomenclature" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="nomenclature"><span class="header-section-number">1.2</span> Nomenclature</h2>
 <p>When discussing data visualization, there are many terms that are not always used consistently across different sources. To help avoid confusion, we will define a few key terms, as they are used in this book and in the ArviZ library:</p>
-<p>At a higher level we have a <code>figure</code>, all the element of our visualization are contained inside a figure, a synonym for figure is chart. A figure can contain one or more <code>plots</code>, other terms for plot are subplot or panel. We compose plots by adding <code>visuals</code> to them. They are the basic elements that we can see in a plot, like a point, a line, or a bar. Other names for <code>visuals</code> are aesthetics, geometric object or glyphs. Visuals has properties that can be modified, such as color, size, and shape. We call these properties <code>aesthetics</code>. It’s very common to use different aesthetics to represent different variables in a plot. For example, if we are plotting information for different countries, we can use different color to represent each country. We can say that the color is an aesthetic that encodes the country variable, this is often referred to as mapping or to be less ambiguous as <code>aesthetic mappings</code>. Alternative to a color we can use <code>faceting</code>, that is to create one <code>plot</code> per variable (like country). In practice, we usually combine <code>faceting</code> and <code>aesthetic mappings</code> to represent different variables. For example, we can use different color to represent different countries and create a separate <code>plot</code> for each year. This allows us to create reach visualizations while keeping them easy to read.</p>
+<p>At a higher level we have a <code>figure</code>, all the element of our visualization are contained inside a figure, a synonym for figure is chart. A figure can contain one or more <code>plots</code>, other terms for plot are subplot or panel. We compose plots by adding <code>visuals</code> to them. They are the basic elements that we can see in a plot, like a point, a line, or a bar. Other names for <code>visuals</code> are aesthetics, geometric object or glyphs. Visuals has properties that can be modified, such as color, size, and shape. We call these properties <code>aesthetics</code>. It’s very common to use different aesthetics to represent different variables in a plot. For example, if we are plotting information for different countries, we can use different color to represent each country. We can say that the color is an aesthetic that encodes the country variable, this is often referred to as mapping or to be less ambiguous as <code>aesthetic mappings</code>. Alternative to a color we can use <code>faceting</code>, that is to create one <code>plot</code> per variable (like country). In practice, we usually combine <code>faceting</code> and <code>aesthetic mappings</code> to represent different variables. For example, we can use different colors to represent different countries and create a separate <code>plot</code> for each year. This allows us to create reach visualizations while keeping them easy to read.</p>
 </section>
 <section id="coordinate-systems-and-axes" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="coordinate-systems-and-axes"><span class="header-section-number">1.3</span> Coordinate systems and axes</h2>
-<p>Data visualization requires defining position scales to determine where different data values are located in a graphic. In 2D visualizations, two numbers are required to uniquely specify a point. Thus, we need two position scales. The arrangement of these scales is known as a coordinate system. The most common coordinate system is the 2D Cartesian system, using x and y values with orthogonal axes. Conventionally with the x-axis running horizontally and the y-axis vertically. <a href="#fig-cartesian" class="quarto-xref">Figure&nbsp;<span>1.1</span></a> shows a Cartesian coordinate system.</p>
+<p>Data visualization requires defining position scales to determine where different data values are located in a graphic. In 2D visualizations, two numbers are required to uniquely specify a point. Thus, we need two position scales. The arrangement of these scales is known as a coordinate system. The most common coordinate system is the 2D Cartesian system, using x and y values with orthogonal axes. Conventionally, the x-axis runs horizontally and the y-axis vertically. <a href="#fig-cartesian" class="quarto-xref">Figure&nbsp;<span>1.1</span></a> shows a Cartesian coordinate system.</p>
 <div id="fig-cartesian" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-cartesian-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../img/cartesian_coordinates.png" class="img-fluid figure-img" style="width:60.0%">
+<img src="../img/cartesian_coordinates.png" class="img-fluid figure-img" style="width:50.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cartesian-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1.1: Cartesian coordinate system
 </figcaption>
 </figure>
 </div>
-<p>In practice, we typically shift the axes so that they do not necessarily pass through the origin (0,0), and instead their location is determined by the data. We do this because it is usually more convenient and easier to read to have the axes to the left and bottom of the figure than in the middle. For instance <a href="#fig-cartesian_shifted" class="quarto-xref">Figure&nbsp;<span>1.2</span></a> plots the exact same points shown in <a href="#fig-cartesian" class="quarto-xref">Figure&nbsp;<span>1.1</span></a> but with the axes placed automatically by matplotlib.</p>
+<p>In practice, we typically shift the axes so that they do not necessarily pass through the origin (0,0), and instead, their location is determined by the data. We do this because it is usually more convenient and easier to read to have the axes to the left and bottom of the figure than in the middle. For instance, <a href="#fig-cartesian_shifted" class="quarto-xref">Figure&nbsp;<span>1.2</span></a> plots the same points shown in <a href="#fig-cartesian" class="quarto-xref">Figure&nbsp;<span>1.1</span></a> but with the axes placed automatically by matplotlib.</p>
 <div id="fig-cartesian_shifted" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-cartesian_shifted-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -627,12 +630,12 @@ Figure&nbsp;1.2: Cartesian coordinate system with axes automatically placed by m
 </figcaption>
 </figure>
 </div>
-<p>Usually, data has units, such as degrees Celsius for temperature, centimetres for length, or kilograms for weight. In case we are plotting variables of different types (and hence different units) we can adjust the aspect ratio of the axes as we wish. We can make a figure short and wide if it fits better on a page or screen. But we can also change the aspect ratio to highlight important differences, for example, if we want to emphasize changes along the y-axis we can make the figure tall and narrow. When both the x and y axes use the same units, it’s important to maintain an equal ratio to ensure that the relationship between data points on the graph accurately reflects their quantitative values.</p>
-<p>After the cartesian coordinate system, the most common coordinate system is the polar coordinate system. In this system, the position of a point is determined by the distance from the origin and the angle with respect to a reference axis. Polar coordinates are useful for representing periodic data, such as days of the week, or data that is naturally represented in a circular shape, such as wind direction. Figure <a href="#fig-polar" class="quarto-xref">Figure&nbsp;<span>1.3</span></a> shows a polar coordinate system.</p>
+<p>Usually, data has units, such as degrees Celsius for temperature, centimetres for length, or kilograms for weight. In case we are plotting variables of different types (and hence different units), we can adjust the aspect ratio of the axes as we wish. We can make a figure short and wide if it fits better on a page or screen. But we can also change the aspect ratio to highlight important differences. For example, if we want to emphasize changes along the y-axis, we can make the figure tall and narrow. When both the x and y axes use the same units, it’s important to maintain an equal ratio to ensure that the relationship between data points on the graph accurately reflects their quantitative values.</p>
+<p>After the Cartesian coordinate system, the most common coordinate system is the polar coordinate system. In this system, the position of a point is determined by the distance from the origin and the angle with respect to a reference axis. Polar coordinates are useful for representing periodic data, such as days of the week, or data that is naturally represented in a circular shape, such as wind direction. Figure <a href="#fig-polar" class="quarto-xref">Figure&nbsp;<span>1.3</span></a> shows a polar coordinate system.</p>
 <div id="fig-polar" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-polar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../img/polar_coordinates.png" class="img-fluid figure-img" style="width:60.0%">
+<img src="../img/polar_coordinates.png" class="img-fluid figure-img" style="width:50.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-polar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1.3: Polar coordinate system
@@ -642,11 +645,11 @@ Figure&nbsp;1.3: Polar coordinate system
 </section>
 <section id="good-practices-and-sources-of-error" class="level2" data-number="1.4">
 <h2 data-number="1.4" class="anchored" data-anchor-id="good-practices-and-sources-of-error"><span class="header-section-number">1.4</span> Good practices and sources of error</h2>
-<p>Using visualization to deceive third parties should not be the goal of an intellectually honest person, but without being careful we can deceive ourselves and other without even realizing it. For example, it has been known for decades that bar-plots are more effective for comparing values than a pie-charts. The reason is that our perceptual apparatus is quite good at evaluating lengths, but not very good at evaluating areas. <a href="#fig-elementary_perceptual_tasks" class="quarto-xref">Figure&nbsp;<span>1.4</span></a> shows different visual elements ordered according to the precision with which the human brain can detect differences and make comparisons between them <span class="citation" data-cites="William1984 Heer2010">(<a href="References.html#ref-William1984" role="doc-biblioref">Cleveland and McGill 1984</a>; <a href="References.html#ref-Heer2010" role="doc-biblioref">Heer and Bostock 2010</a>)</span>.</p>
+<p>Using visualization to deceive third parties should not be the goal of an intellectually honest person, but without being careful, we can deceive ourselves and other without even realizing it. For example, it has been known for decades that bar-plots are more effective for comparing values than a pie-charts. The reason is that our perceptual apparatus is quite good at evaluating lengths, but not very good at evaluating areas. <a href="#fig-elementary_perceptual_tasks" class="quarto-xref">Figure&nbsp;<span>1.4</span></a> shows different visual elements ordered according to the precision with which the human brain can detect differences and make comparisons between them <span class="citation" data-cites="William1984 Heer2010">(<a href="References.html#ref-William1984" role="doc-biblioref">Cleveland and McGill 1984</a>; <a href="References.html#ref-Heer2010" role="doc-biblioref">Heer and Bostock 2010</a>)</span>.</p>
 <div id="fig-elementary_perceptual_tasks" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-elementary_perceptual_tasks-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../img/elementary_perceptual_tasks.png" class="img-fluid figure-img" style="width:70.0%">
+<img src="../img/elementary_perceptual_tasks.png" class="img-fluid figure-img" style="width:50.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-elementary_perceptual_tasks-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1.4: Scale of elementary perceptual tasks, taken from <a href="https://www.amazon.com/Truthful-Art-Data-Charts-Communication/dp/0321934075">The Truthful Art</a>
@@ -655,10 +658,10 @@ Figure&nbsp;1.4: Scale of elementary perceptual tasks, taken from <a href="https
 </div>
 <section id="general-principles-for-using-colours" class="level3" data-number="1.4.1">
 <h3 data-number="1.4.1" class="anchored" data-anchor-id="general-principles-for-using-colours"><span class="header-section-number">1.4.1</span> General principles for using colours</h3>
-<p>Human eyes work by essentially perceiving 3 wavelengths, this feature is used in technological devices such as screens to generate all colours from combinations of 3 components, Red, Green, and Blue. This is known as the <a href="https://en.wikipedia.org/wiki/RGB_color_model">RGB color model</a>. But this is not the only possible system. A very common alternative is the CYMK <a href="https://en.wikipedia.org/wiki/CMYK_color_model">color model</a>, Cyan, Yellow, Magenta, and Black.</p>
+<p>Human eyes work by essentially perceiving 3 wavelengths. This feature is used in technological devices such as screens to generate all colours from combinations of 3 components, Red, Green, and Blue. This is known as the <a href="https://en.wikipedia.org/wiki/RGB_color_model">RGB color model</a>. But this is not the only possible system. A very common alternative is the CYMK <a href="https://en.wikipedia.org/wiki/CMYK_color_model">color model</a>, Cyan, Yellow, Magenta, and Black.</p>
 <p>To analyze the perceptual attributes of color, it is better to think in terms of Hue, Saturation, and Lightness, <a href="https://en.wikipedia.org/wiki/HSL_and_HSV">HSL</a> is an alternative representation of the RGB color model.</p>
 <p>The hue is what we colloquially call “different colours”. Green, red, etc. Saturation is how colourful or washed out we perceive a given color. Two colours with different hues will look more different when they have more saturation. The lightness corresponds to the amount of light emitted (active screens) or reflected (impressions), ranging from black to white:</p>
-<p>Varying the tone is useful to easily distinguish categories as shown in <a href="#fig-hue" class="quarto-xref">Figure&nbsp;<span>1.5</span></a>.</p>
+<p>Varying the tone is useful to easily distinguish categories, as shown in <a href="#fig-hue" class="quarto-xref">Figure&nbsp;<span>1.5</span></a>.</p>
 <div id="fig-hue" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-hue-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -669,9 +672,9 @@ Figure&nbsp;1.5: Tone variations can be help to distinguish categories.
 </figcaption>
 </figure>
 </div>
-<p>In principle, most humans are capable of distinguishing millions of tones, but if we want to associate categories with colours, the effectiveness of distinguishing them decreases drastically as the number of categories increases. This happens not only because the tones will be increasingly closer to each other, but also because we have a limited working memory. Associating a few colours (say 4) with categories (countries, temperature ranges, etc.) is usually easy. But unless there are pre-existing associations, remembering many categories becomes challenging and this exacerbates when colours are close to each other. This requires us to continually alternate between the graphic and the legend or text where the color-category association is indicated. Adding other elements besides color such as shapes can help, but in general, it will be more useful to try to keep the number of categories relatively low. In addition, it is important to take into account the presentation context, if we want to show a figure during a presentation where we only have a few seconds to dedicate to that figure, it is advisable to keep the figure as simple as possible. This may involve removing items and displaying only a subset of the data. If the figure is part of a text, where the reader will have the time to analyze for a longer period, perhaps the complexity can be somewhat greater.</p>
+<p>In principle, most humans are capable of distinguishing millions of tones, but if we want to associate categories with colours, the effectiveness of distinguishing them decreases drastically as the number of categories increases. This happens not only because the tones will be increasingly closer to each other, but also because we have a limited working memory. Associating a few colours (say 4) with categories (countries, temperature ranges, etc.) is usually easy. But unless there are pre-existing associations, remembering many categories becomes challenging, and this exacerbates when colours are close to each other. This requires us to continually alternate between the graphic and the legend or text where the color-category association is indicated. Adding other elements besides color, such as shapes, can help, but in general, it will be more useful to try to keep the number of categories relatively low. In addition, it is important to take into account the presentation context, if we want to show a figure during a presentation where we only have a few seconds to dedicate to that figure, it is advisable to keep the figure as simple as possible. This may involve removing items and displaying only a subset of the data. If the figure is part of a text, where the reader will have the time to analyze for a longer period, perhaps the complexity can be somewhat greater.</p>
 <p>Although we mentioned before that human eyes are capable of distinguishing three main colours (red, green, and blue), the ability to distinguish these 3 colours varies between people, to the point that many individuals have difficulty distinguishing some colours. The most common case occurs with red and green. This is why it is important to avoid using those colours. An easy way to avoid this problem is to use <em>color-blind-friendly</em> palettes. We’ll see later that this is an easy thing to do when using ArviZ.</p>
-<p>Varying the lightness as in <a href="#fig-lightness" class="quarto-xref">Figure&nbsp;<span>1.6</span></a> is useful when we want to represent a continuous scale. With the hue-based palette (left), it’s quite difficult to determine that our data shows two “spikes”, whereas this is easier to see with the lightness-modifying palette (right). Varying the lightness helps to see the structure of the data since changes in lightness are more intuitively processed as quantitative changes.</p>
+<p>Varying the lightness, as in <a href="#fig-lightness" class="quarto-xref">Figure&nbsp;<span>1.6</span></a> is useful when we want to represent a continuous scale. With the hue-based palette (left), it’s quite difficult to determine that our data shows two “spikes”, whereas this is easier to see with the lightness-modifying palette (right). Varying the lightness helps to see the structure of the data since changes in lightness are more intuitively processed as quantitative changes.</p>
 <div id="fig-lightness" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-lightness-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -682,8 +685,8 @@ Figure&nbsp;1.6: Hue-based palette (left) vs lightness-modifying palette (right)
 </figcaption>
 </figure>
 </div>
-<p>One detail that we should note is that the graph on the right of <a href="#fig-lightness" class="quarto-xref">Figure&nbsp;<span>1.6</span></a> does not change only the lightness, it is not a map in gray or blue scales. That palette also changes the hue but in a very subtle way. This makes it aesthetically more pleasing and the subtle variation in hue contributes to increasing the perceptual distance between two values and therefore the ability to distinguish small differences.</p>
-<p>When using colours to represent numerical variables it is important to use uniformly perceptual maps like those offered by <a href="https://matplotlib.org/stable/users/explain/colors/colormaps.html">matplotlib</a> or <a href="https://colorcet.holoviz.org/">colorcet</a>. These are maps where the colours vary in such a way that they adequately reflect changes in the data. Not all colormaps are perceptually uniform. Obtaining them is not trivial. <a href="#fig-colormaps" class="quarto-xref">Figure&nbsp;<span>1.7</span></a> shows the same image using different colormaps. We can see that widely used maps such as jet (also called rainbow) generate distortions in the image. In contrast <strong>viridis</strong>, a perceptually uniform color map does not generate such distortions (more details <a href="https://bids.github.io/colormap/">here</a>).</p>
+<p>One detail that we should note is that the graph on the right of <a href="#fig-lightness" class="quarto-xref">Figure&nbsp;<span>1.6</span></a> does not change only the lightness; it is not a map in gray or blue scales. That palette also changes the hue, but in a very subtle way. This makes it aesthetically more pleasing, and the subtle variation in hue contributes to increasing the perceptual distance between two values and therefore the ability to distinguish small differences.</p>
+<p>When using colours to represent numerical variable,s it is important to use uniformly perceptual maps like those offered by <a href="https://matplotlib.org/stable/users/explain/colors/colormaps.html">matplotlib</a> or <a href="https://colorcet.holoviz.org/">colorcet</a>. These are maps where the colours vary in such a way that they adequately reflect changes in the data. Not all colormaps are perceptually uniform. Obtaining them is not trivial. <a href="#fig-colormaps" class="quarto-xref">Figure&nbsp;<span>1.7</span></a> shows the same image using different colormaps. We can see that widely used map,s such as jet (also called rainbow) generate distortions in the image. In contrast, <strong>viridis</strong>, a perceptually uniform color map, does not generate such distortions (more details <a href="https://bids.github.io/colormap/">here</a>).</p>
 <div id="fig-colormaps" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-colormaps-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -707,21 +710,27 @@ Figure&nbsp;1.7: non-uniformly perceptual maps like jet can be very misleading
 <div id="cell-fig-style_variat" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>azp.style.use(<span class="st">'arviz-variat'</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>az.style.use(<span class="st">'arviz-variat'</span>)</span>
 <span id="cb1-2"><a href="#cb1-2"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">100</span>)</span>
 <span id="cb1-3"><a href="#cb1-3"></a>dist <span class="op">=</span> pz.Beta(<span class="dv">2</span>, <span class="dv">5</span>).pdf(x)</span>
 <span id="cb1-4"><a href="#cb1-4"></a></span>
-<span id="cb1-5"><a href="#cb1-5"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="fl">4.5</span>, <span class="fl">2.5</span>))</span>
+<span id="cb1-5"><a href="#cb1-5"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">4</span>, <span class="dv">2</span>))</span>
 <span id="cb1-6"><a href="#cb1-6"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">8</span>):</span>
 <span id="cb1-7"><a href="#cb1-7"></a>    plt.plot(x, dist <span class="op">-</span> i, <span class="ss">f'C</span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">'</span>, label<span class="op">=</span><span class="ss">f'C</span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">'</span>, lw<span class="op">=</span><span class="dv">3</span>)</span>
 <span id="cb1-8"><a href="#cb1-8"></a>plt.xlabel(<span class="st">'x'</span>)</span>
 <span id="cb1-9"><a href="#cb1-9"></a>plt.ylabel(<span class="st">'f(x)'</span>, rotation<span class="op">=</span><span class="dv">0</span>, labelpad<span class="op">=</span><span class="dv">15</span>)<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
+<div class="cell-output cell-output-stderr">
+<pre><code>/opt/hostedtoolcache/Python/3.13.13/x64/lib/python3.13/site-packages/pytensor/link/numba/dispatch/basic.py:214: UserWarning: Numba will use object mode to run XlogY0's perform method. Set `pytensor.config.compiler_verbose = True` to see more details.
+  warnings.warn(
+/opt/hostedtoolcache/Python/3.13.13/x64/lib/python3.13/site-packages/pytensor/tensor/xlogx.py:47: RuntimeWarning: divide by zero encountered in log
+  return x * np.log(y)</code></pre>
+</div>
 <div class="cell-output cell-output-display">
 <div id="fig-style_variat" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-style_variat-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Elements_of_visualization_files/figure-html/fig-style_variat-output-1.png" width="923" height="523" class="figure-img">
+<img src="Elements_of_visualization_files/figure-html/fig-style_variat-output-2.png" width="823" height="423" class="figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-style_variat-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1.8: arviz-variat style use a color-blind friendly palette
@@ -735,21 +744,21 @@ Figure&nbsp;1.8: arviz-variat style use a color-blind friendly palette
 <div id="cell-fig-style_cetrino" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>azp.style.use(<span class="st">'arviz-cetrino'</span>)</span>
-<span id="cb2-2"><a href="#cb2-2"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">100</span>)</span>
-<span id="cb2-3"><a href="#cb2-3"></a>dist <span class="op">=</span> pz.Beta(<span class="dv">2</span>, <span class="dv">5</span>).pdf(x)</span>
-<span id="cb2-4"><a href="#cb2-4"></a></span>
-<span id="cb2-5"><a href="#cb2-5"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="fl">4.5</span>, <span class="fl">2.5</span>))</span>
-<span id="cb2-6"><a href="#cb2-6"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">8</span>):</span>
-<span id="cb2-7"><a href="#cb2-7"></a>    plt.plot(x, dist <span class="op">-</span> i, <span class="ss">f'C</span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">'</span>, label<span class="op">=</span><span class="ss">f'C</span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">'</span>, lw<span class="op">=</span><span class="dv">3</span>)</span>
-<span id="cb2-8"><a href="#cb2-8"></a>plt.xlabel(<span class="st">'x'</span>)</span>
-<span id="cb2-9"><a href="#cb2-9"></a>plt.ylabel(<span class="st">'f(x)'</span>, rotation<span class="op">=</span><span class="dv">0</span>, labelpad<span class="op">=</span><span class="dv">15</span>)<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>az.style.use(<span class="st">'arviz-cetrino'</span>)</span>
+<span id="cb3-2"><a href="#cb3-2"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">100</span>)</span>
+<span id="cb3-3"><a href="#cb3-3"></a>dist <span class="op">=</span> pz.Beta(<span class="dv">2</span>, <span class="dv">5</span>).pdf(x)</span>
+<span id="cb3-4"><a href="#cb3-4"></a></span>
+<span id="cb3-5"><a href="#cb3-5"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">4</span>, <span class="dv">2</span>))</span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">8</span>):</span>
+<span id="cb3-7"><a href="#cb3-7"></a>    plt.plot(x, dist <span class="op">-</span> i, <span class="ss">f'C</span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">'</span>, label<span class="op">=</span><span class="ss">f'C</span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">'</span>, lw<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb3-8"><a href="#cb3-8"></a>plt.xlabel(<span class="st">'x'</span>)</span>
+<span id="cb3-9"><a href="#cb3-9"></a>plt.ylabel(<span class="st">'f(x)'</span>, rotation<span class="op">=</span><span class="dv">0</span>, labelpad<span class="op">=</span><span class="dv">15</span>)<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
 <div id="fig-style_cetrino" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-style_cetrino-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Elements_of_visualization_files/figure-html/fig-style_cetrino-output-1.png" width="923" height="523" class="figure-img">
+<img src="Elements_of_visualization_files/figure-html/fig-style_cetrino-output-1.png" width="823" height="423" class="figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-style_cetrino-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1.9: arviz-cetrino style use a color-blind friendly palette
@@ -763,21 +772,21 @@ Figure&nbsp;1.9: arviz-cetrino style use a color-blind friendly palette
 <div id="cell-fig-style_tenui" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>azp.style.use(<span class="st">'arviz-tenui'</span>)</span>
-<span id="cb3-2"><a href="#cb3-2"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">100</span>)</span>
-<span id="cb3-3"><a href="#cb3-3"></a>dist <span class="op">=</span> pz.Beta(<span class="dv">2</span>, <span class="dv">5</span>).pdf(x)</span>
-<span id="cb3-4"><a href="#cb3-4"></a></span>
-<span id="cb3-5"><a href="#cb3-5"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="fl">4.5</span>, <span class="fl">2.5</span>))</span>
-<span id="cb3-6"><a href="#cb3-6"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">8</span>):</span>
-<span id="cb3-7"><a href="#cb3-7"></a>    plt.plot(x, dist <span class="op">-</span> i, <span class="ss">f'C</span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">'</span>, label<span class="op">=</span><span class="ss">f'C</span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">'</span>, lw<span class="op">=</span><span class="dv">3</span>)</span>
-<span id="cb3-8"><a href="#cb3-8"></a>plt.xlabel(<span class="st">'x'</span>)</span>
-<span id="cb3-9"><a href="#cb3-9"></a>plt.ylabel(<span class="st">'f(x)'</span>, rotation<span class="op">=</span><span class="dv">0</span>, labelpad<span class="op">=</span><span class="dv">15</span>)<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>az.style.use(<span class="st">'arviz-tenui'</span>)</span>
+<span id="cb4-2"><a href="#cb4-2"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">100</span>)</span>
+<span id="cb4-3"><a href="#cb4-3"></a>dist <span class="op">=</span> pz.Beta(<span class="dv">2</span>, <span class="dv">5</span>).pdf(x)</span>
+<span id="cb4-4"><a href="#cb4-4"></a></span>
+<span id="cb4-5"><a href="#cb4-5"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">4</span>, <span class="dv">2</span>))</span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">8</span>):</span>
+<span id="cb4-7"><a href="#cb4-7"></a>    plt.plot(x, dist <span class="op">-</span> i, <span class="ss">f'C</span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">'</span>, label<span class="op">=</span><span class="ss">f'C</span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">'</span>, lw<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb4-8"><a href="#cb4-8"></a>plt.xlabel(<span class="st">'x'</span>)</span>
+<span id="cb4-9"><a href="#cb4-9"></a>plt.ylabel(<span class="st">'f(x)'</span>, rotation<span class="op">=</span><span class="dv">0</span>, labelpad<span class="op">=</span><span class="dv">15</span>)<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
 <div id="fig-style_tenui" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-style_tenui-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Elements_of_visualization_files/figure-html/fig-style_tenui-output-1.png" width="923" height="523" class="figure-img">
+<img src="Elements_of_visualization_files/figure-html/fig-style_tenui-output-1.png" width="823" height="423" class="figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-style_tenui-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1.10: arviz-tenui style use a color-blind friendly palette
@@ -791,21 +800,21 @@ Figure&nbsp;1.10: arviz-tenui style use a color-blind friendly palette
 <div id="cell-fig-style_tumma" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>azp.style.use(<span class="st">'arviz-tumma'</span>)</span>
-<span id="cb4-2"><a href="#cb4-2"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">100</span>)</span>
-<span id="cb4-3"><a href="#cb4-3"></a>dist <span class="op">=</span> pz.Beta(<span class="dv">2</span>, <span class="dv">5</span>).pdf(x)</span>
-<span id="cb4-4"><a href="#cb4-4"></a></span>
-<span id="cb4-5"><a href="#cb4-5"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="fl">4.5</span>, <span class="fl">2.5</span>))</span>
-<span id="cb4-6"><a href="#cb4-6"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">8</span>):</span>
-<span id="cb4-7"><a href="#cb4-7"></a>    plt.plot(x, dist <span class="op">-</span> i, <span class="ss">f'C</span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">'</span>, label<span class="op">=</span><span class="ss">f'C</span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">'</span>, lw<span class="op">=</span><span class="dv">3</span>)</span>
-<span id="cb4-8"><a href="#cb4-8"></a>plt.xlabel(<span class="st">'x'</span>)</span>
-<span id="cb4-9"><a href="#cb4-9"></a>plt.ylabel(<span class="st">'f(x)'</span>, rotation<span class="op">=</span><span class="dv">0</span>, labelpad<span class="op">=</span><span class="dv">15</span>)<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>az.style.use(<span class="st">'arviz-tumma'</span>)</span>
+<span id="cb5-2"><a href="#cb5-2"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">100</span>)</span>
+<span id="cb5-3"><a href="#cb5-3"></a>dist <span class="op">=</span> pz.Beta(<span class="dv">2</span>, <span class="dv">5</span>).pdf(x)</span>
+<span id="cb5-4"><a href="#cb5-4"></a></span>
+<span id="cb5-5"><a href="#cb5-5"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">4</span>, <span class="dv">2</span>))</span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">8</span>):</span>
+<span id="cb5-7"><a href="#cb5-7"></a>    plt.plot(x, dist <span class="op">-</span> i, <span class="ss">f'C</span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">'</span>, label<span class="op">=</span><span class="ss">f'C</span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">'</span>, lw<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb5-8"><a href="#cb5-8"></a>plt.xlabel(<span class="st">'x'</span>)</span>
+<span id="cb5-9"><a href="#cb5-9"></a>plt.ylabel(<span class="st">'f(x)'</span>, rotation<span class="op">=</span><span class="dv">0</span>, labelpad<span class="op">=</span><span class="dv">15</span>)<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
 <div id="fig-style_tumma" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-style_tumma-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Elements_of_visualization_files/figure-html/fig-style_tumma-output-1.png" width="923" height="523" class="figure-img">
+<img src="Elements_of_visualization_files/figure-html/fig-style_tumma-output-1.png" width="823" height="423" class="figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-style_tumma-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1.11: arviz-tumma style use a color-blind friendly palette
@@ -819,21 +828,21 @@ Figure&nbsp;1.11: arviz-tumma style use a color-blind friendly palette
 <div id="cell-fig-style_vibrant" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>azp.style.use(<span class="st">'arviz-vibrant'</span>)</span>
-<span id="cb5-2"><a href="#cb5-2"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">100</span>)</span>
-<span id="cb5-3"><a href="#cb5-3"></a>dist <span class="op">=</span> pz.Beta(<span class="dv">2</span>, <span class="dv">5</span>).pdf(x)</span>
-<span id="cb5-4"><a href="#cb5-4"></a></span>
-<span id="cb5-5"><a href="#cb5-5"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="fl">4.5</span>, <span class="fl">2.5</span>))</span>
-<span id="cb5-6"><a href="#cb5-6"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">8</span>):</span>
-<span id="cb5-7"><a href="#cb5-7"></a>    plt.plot(x, dist <span class="op">-</span> i, <span class="ss">f'C</span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">'</span>, label<span class="op">=</span><span class="ss">f'C</span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">'</span>, lw<span class="op">=</span><span class="dv">3</span>)</span>
-<span id="cb5-8"><a href="#cb5-8"></a>plt.xlabel(<span class="st">'x'</span>)</span>
-<span id="cb5-9"><a href="#cb5-9"></a>plt.ylabel(<span class="st">'f(x)'</span>, rotation<span class="op">=</span><span class="dv">0</span>, labelpad<span class="op">=</span><span class="dv">15</span>)<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>az.style.use(<span class="st">'arviz-vibrant'</span>)</span>
+<span id="cb6-2"><a href="#cb6-2"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">100</span>)</span>
+<span id="cb6-3"><a href="#cb6-3"></a>dist <span class="op">=</span> pz.Beta(<span class="dv">2</span>, <span class="dv">5</span>).pdf(x)</span>
+<span id="cb6-4"><a href="#cb6-4"></a></span>
+<span id="cb6-5"><a href="#cb6-5"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">4</span>, <span class="dv">2</span>))</span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">8</span>):</span>
+<span id="cb6-7"><a href="#cb6-7"></a>    plt.plot(x, dist <span class="op">-</span> i, <span class="ss">f'C</span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">'</span>, label<span class="op">=</span><span class="ss">f'C</span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">'</span>, lw<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb6-8"><a href="#cb6-8"></a>plt.xlabel(<span class="st">'x'</span>)</span>
+<span id="cb6-9"><a href="#cb6-9"></a>plt.ylabel(<span class="st">'f(x)'</span>, rotation<span class="op">=</span><span class="dv">0</span>, labelpad<span class="op">=</span><span class="dv">15</span>)<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
 <div id="fig-style_vibrant" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-style_vibrant-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Elements_of_visualization_files/figure-html/fig-style_vibrant-output-1.png" width="923" height="523" class="figure-img">
+<img src="Elements_of_visualization_files/figure-html/fig-style_vibrant-output-1.png" width="823" height="423" class="figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-style_vibrant-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1.12: arviz-vibrant style use a color-blind friendly palette
@@ -845,8 +854,8 @@ Figure&nbsp;1.12: arviz-vibrant style use a color-blind friendly palette
 </div>
 </div>
 </div>
-<p>The color palettes in ArviZ were designed with the help of <a href="https://colorcyclepicker.mpetroff.net">colorcyclepicker</a> to minimize the risk of confusion for people with color vision deficiencies. We also follow the recommendation from <span class="citation" data-cites="wilke_2019">Wilke (<a href="References.html#ref-wilke_2019" role="doc-biblioref">2019</a>)</span> and restrict the color palette to a maximum of 8 colors. If you need to use many colors it’s recommended to explore alternatives like using different line styles, different markers, faceting or direct labelling.</p>
-<p>If you need to create figures in grayscale you can use the first 3 colours of the <code>arviz-vibrant</code> pallete and then convert to grayscale. But remember to check that the result looks goods after the conversion.</p>
+<p>The color palettes in ArviZ were designed with the help of <a href="https://colorcyclepicker.mpetroff.net">colorcyclepicker</a> to minimize the risk of confusion for people with color vision deficiencies. We also follow the recommendation from <span class="citation" data-cites="wilke_2019">Wilke (<a href="References.html#ref-wilke_2019" role="doc-biblioref">2019</a>)</span> and restrict the color palette to a maximum of 8 colors. If you need to use many colors, it’s recommended to explore alternatives like using different line styles, different markers, faceting, or direct labelling.</p>
+<p>If you need to create figures in grayscale, you can use the first 3 colours of the <code>arviz-vibrant</code> palette and then convert to grayscale. But remember to check that the result looks goods after the conversion.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
