@@ -1,9 +1,9 @@
 project:
   type: book
   output-dir: docs
-
 book:
   title: "Exploratory Analysis of Bayesian Models"
+  date: "2025-04-02"
   author:
     - name: Osvaldo A. Martin 
       url: https://aloctavodia.github.io/
@@ -32,8 +32,14 @@ book:
           postal-code: 15108
     - name: ArviZ-devs
       url: https://github.com/arviz-devs
+  citation:
+    type: book
+    doi: "10.5281/zenodo.15127548"
+    url: "https://arviz-devs.github.io/EABM/"
+    issued: "2026-02"
+    publisher: "Zenodo"
+  google-scholar: true
   favicon: favicon.ico
-
   chapters:
     - index.qmd
     - Chapters/Elements_of_visualization.qmd
@@ -52,7 +58,6 @@ book:
     - Chapters/Presenting_results.qmd
     - Chapters/Bayesian_workflow.qmd
     - Chapters/References.qmd
-
   page-navigation: true
   reader-mode: true
   sidebar:
@@ -69,24 +74,14 @@ book:
       - icon: coin
         href: https://numfocus.org/donate-to-arviz 
         text: donations
-
 format:
   html:
-    date: 2025-04-02
     date-modified: today
     toc: true
     code-line-numbers: true
     number-sections: true
     number-offset: -1
-
-
 theme:
   light: cosmo
   dark: darkly
-
 bibliography: references.bib
-
-citation:
-  doi: "10.5281/zenodo.15127548"
-  url: https://arviz-devs.github.io/EABM/
-google-scholar: true
