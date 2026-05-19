@@ -1,10 +1,8 @@
 arviz>=1.1.0
-arviz-plots @ git+https://github.com/arviz-devs/arviz-plots.git
-bambi @ git+https://github.com/bambinos/bambi.git
-kulprit @ git+https://github.com/bambinos/kulprit.git
-preliz @ git+https://github.com/arviz-devs/preliz.git
+bambi>=0.18.0
+kulprit>=0.6.0
+preliz>=0.25.0
 netcdf4>=1.7.2
-pymc @ git+https://github.com/pymc-devs/pymc.git
-pymc-bart @ git+https://github.com/pymc-devs/pymc-bart.git
-pymc-extras>=0.5.0
-scipy>=1.16.2
+pymc>=6.0.0
+pymc-bart>=0.12.0
+pymc-extras>=0.11.0
